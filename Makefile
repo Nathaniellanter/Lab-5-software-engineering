@@ -1,13 +1,10 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17
-TARGET = matrix_ops
 
-all: $(TARGET)
-
-$(TARGET): matrix_ops.cpp
-	$(CXX) $(CXXFLAGS) -o $(TARGET) matrix_ops.cpp
+main: main.cpp
+	$(CXX) $(CXXFLAGS) main.cpp -o main
 
 clean:
-	rm -f $(TARGET)
+	rm -f main
 
-.PHONY: all clean
+.PHONY: clean
